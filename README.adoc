@@ -15,8 +15,8 @@ I apologize in advance for if you see that I'm not following all the way styling
 syntax conventions, for the ackward and weird logic, for the slow performance
 and the unoptimized code.
 
-As I said this is a preparation repo, and my hopes are that it will help me in
-my learning path to be a better programmer.
+As I said this is a preparation repo, and my hopes are that it will help my
+learning path to become a better programmer.
 
 This repo will definitely show my flaws as a programmer so you're welcome to
 contribute with observations, comments, resources, mentoring, edge cases or
@@ -24,22 +24,22 @@ other ways that you may think will be of great help.
 
 Also, I've decided to make this repository public because I think it may help
 others start their journey, as I'll share the resources that I have use to learn
-Web Development.
+Web Development and think it may be useful for someone in the same process.
 
 == Resources
 
 === Web Development Schools
-- link:https://www.microverse.org/[Microverse]
-- link:https://www.freecodecamp.org/[Free Code Camp]
+* link:https://www.microverse.org/[Microverse]
+* link:https://www.freecodecamp.org/[Free Code Camp]
 
 === HTML and CSS
 
 === Ruby Tutorials
-- link:https://www.rubykoans.com/[Ruby Koans]
-- link:https://rubymonk.com/[Ruby Monk]
-- link:https://exercism.io/[Exercism]
+* link:https://www.rubykoans.com/[Ruby Koans]
+* link:https://rubymonk.com/[Ruby Monk]
+* link:https://exercism.io/[Exercism]
 
 === Ruby on Rails
 
-- *Books*
--- link:https://www.railstutorial.org/[The Rails Tutorial] by Michale Hartl
+* *Books*
+** link:https://www.railstutorial.org/[The Rails Tutorial] by Michale Hartl
