@@ -40,6 +40,10 @@ Web Development and think it may be useful for someone in the same process.
 * link:https://exercism.io/[Exercism]
 
 === Ruby on Rails
-
 * *Books*
-** link:https://www.railstutorial.org/[The Rails Tutorial] by Michale Hartl
+** link:https://www.railstutorial.org/[The Rails Tutorial] by Michael Hartl
+
+// === Mentor
+// *Victor Goff*
+// GitHub: linkk:https://github.com/kotp[@kotp]
+
