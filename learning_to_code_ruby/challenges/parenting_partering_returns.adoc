@@ -1,8 +1,8 @@
 = Parenting Partnering Retunrs
 
-source: [Coding
-Competitions]('https://codingcompetitions.withgoogle.com/codejam/round/000000000019fd27/000000000020bdf9')
-by [Google]('https://about.google')
+source: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fd27/000000000020bdf9[Coding
+Competitions]
+by https://about.google[Google]
 
 == Problem
 Cameron and Jamie's kid is almost 3 years old! However, even though the
