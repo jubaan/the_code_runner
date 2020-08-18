@@ -108,11 +108,11 @@ We can solve this test set by naively trying every possible subset of
 activities to be covered by Jamie and assign the rest of the activities to be
 covered by Cameron. For each subset of activities, we can check whether a pair
 of activities overlap for each pair of activities. An activity with start
-time s1 and end time t1 overlaps with another activity with start time s2 and
-end time t2 if the time intersection is not empty (i.e., max(s1, s2) <
-min(t1, t2)).
+time s~1~ and end time t~1~ overlaps with another activity with start time s~2~ and
+end time t~2~ if the time intersection is not empty (i.e., max(s~1~, s~2~) <
+min(t1, t~2~)).
 
-The running time of this solution is O(2N × N2), which is fast enough to
+The running time of this solution is O(2*^N^* × *N*^2^), which is fast enough to
 solve Test Set 1.
 
 Test Set 2
@@ -136,17 +136,17 @@ three activities that pairwise overlap, so by the contrapositive of the the
 previous argument, we will be able to assign the activity to at least one of
 Jamie or Cameron at every step.
 
-The running time of this solution is O(N2), which is fast enough to solve
-this test set. To optimize the solution to O(N log N) time, we can
+The running time of this solution is O(*N*^2^), which is fast enough to solve
+this test set. To optimize the solution to O(*N* log *N*) time, we can
 efficiently check whether an activity can be assigned to Jamie or Cameron
 by keeping track of the end time of the last activity assigned to each
 partner and comparing this to the start time of the new activity. In this
-case, only O(N) extra time is needed after sorting the activities by their
+case, only O(*N*) extra time is needed after sorting the activities by their
 start time.
 
 Graph approach
 Another possible approach to solve this test set is to construct a graph
-with N nodes, each representing one activity. We add an edge connecting a pair
+with *N* nodes, each representing one activity. We add an edge connecting a pair
 of nodes if the pair of activities represented by the nodes overlap (see
 Test Set 1 section for details on how to check if two intervals overlap).
 This graph is commonly known as an interval graph.
@@ -156,7 +156,7 @@ such that every edge connects a node in C and a node in J, as we can assign
 all activities represented by nodes in C to Cameron and all activities
 represented by nodes in J to Jamie. The running time of the algorithm to
 find the partition (or report if one does not exist) is linear on the size
-of the graph. The graph has N nodes and O(N2) edges, which means the
-solution requires O(N2) time to build the graph and O(N2) time to run the
-partition algorithm, so also O(N2) time overall.
+of the graph. The graph has *N* nodes and O(*N*^2^) edges, which means the
+solution requires O(*N*^2^) time to build the graph and O(*N*^2^) time to run the
+partition algorithm, so also O(*N*^2^) time overall.
 
