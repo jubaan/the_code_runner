@@ -112,7 +112,7 @@ time s~1~ and end time t~1~ overlaps with another activity with start time s~2~ 
 end time t~2~ if the time intersection is not empty (i.e., max(s~1~, s~2~) <
 min(t1, t~2~)).
 
-The running time of this solution is O(2*^N^* × *N*^2^), which is fast enough to
+The running time of this solution is O(2^N^ × *N*^2^), which is fast enough to
 solve Test Set 1.
 
 Test Set 2
