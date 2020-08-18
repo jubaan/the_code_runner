@@ -84,7 +84,6 @@ Test set 2 (visible Verdict)
 2 +
 0 720 +
 720 1440 +
- +
 |Case #1: CJC +
 Case #2: IMPOSSIBLE +
 Case #3: JCCJJ +
