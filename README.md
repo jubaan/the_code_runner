@@ -6,7 +6,7 @@ _The Code Runner_ repository is a personal project part of my journey as a
 Web Developer. The main goal is to practice my learnings, develop better
 coding habits, and improve my skills.
 
-It will help me to keep a record of my improvement, and useful for notetaking.
+It will help me to keep a record of my improvement, and be useful for notetaking.
 
 You are welcome to make comments, raise issues, and be supportive. I will
 appreciate every bit of knowledge and resources. Share links to
