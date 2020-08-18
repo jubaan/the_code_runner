@@ -145,14 +145,17 @@ case, only O(*N*) extra time is needed after sorting the activities by their
 start time.
 
 Graph approach
-Another possible approach to solve this test set is to construct a graph
+Another possible approach to solve this test set is to construct a
+https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)[graph]
 with *N* nodes, each representing one activity. We add an edge connecting a pair
 of nodes if the pair of activities represented by the nodes overlap (see
 Test Set 1 section for details on how to check if two intervals overlap).
-This graph is commonly known as an interval graph.
+This graph is commonly known as an
+https://en.wikipedia.org/wiki/Interval_graph[interval graph].
 
-Therefore, the problem is equivalent to finding a partition of nodes C and J
-such that every edge connects a node in C and a node in J, as we can assign
+Therefore, the problem is equivalent to
+https://en.wikipedia.org/wiki/Bipartite_graph[finding a partition of nodes C and J
+such that every edge connects a node in C and a node in J], as we can assign
 all activities represented by nodes in C to Cameron and all activities
 represented by nodes in J to Jamie. The running time of the algorithm to
 find the partition (or report if one does not exist) is linear on the size
