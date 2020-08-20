@@ -1,4 +1,3 @@
-# rubocop:disable Style/FrozenStringLiteralComment
 
 # doctest: Returns a string, "IMPOSSIBLE" if it cann't be solved or a string with the case number and one of the possible schedules
 # >> schedule(1, [[360, 480], [420, 540], [600,660]])
@@ -26,7 +25,10 @@ def schedule(test, time_blocks)
     elsif overlap_any?(cameron, time_blocks[i])
       jamie << time_blocks[i]
       output << 'J'
-    else
+    elsif !overlap_any?(jamie, time_blocks[i])
+      jamie << time_blocks[i]
+      output << 'J'
+    elsif overlap_any?(jamie, time_blocks[i])
       cameron << time_blocks[i]
       output << 'C'
     end
@@ -48,4 +50,3 @@ end
 
 
 
-# rubocop:enable Style/FrozenStringLiteralComment
