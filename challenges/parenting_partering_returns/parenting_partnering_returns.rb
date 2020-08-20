@@ -1,7 +1,13 @@
-def overlap?(activity_1, activity_2)
-  return false unless activity_1
-  return false unless activity_2
-  [activity_1[0], activity_2[0]].max < [activity_1[-1], activity_2[-1]].min
+# rubocop:disable Style/FrozenStringLiteralComment
+
+# doctest: Returns a string, "IMPOSSIBLE" if it cann't be solved or a string with the case number and one of the possible schedules
+# >> schedule(1, [[360, 480], [420, 540], [600,660]])
+# => "Case #1: CJC"
+
+def overlap_any?(assigned_schedule, new_activity)
+  assigned_schedule.any? do |activity|
+    [activity[0], new_activity[0]].max < [activity[-1], new_activity[-1]].min
+  end
 end
 
 def schedule(test, time_blocks)
@@ -11,14 +17,13 @@ def schedule(test, time_blocks)
 
   i = 0
   while i < time_blocks.length
-    # binding.pry
     if i == 0
       cameron << time_blocks[i]
       i += 1
       next output << 'C'
-    elsif jamie.any? { |activity| overlap?(activity, time_blocks[i]) } && cameron.any? { |activity| overlap?(activity, time_blocks[i]) }
+    elsif overlap_any?(jamie, time_blocks[i]) && overlap_any?(cameron, time_blocks[i])
       break output = 'IMPOSSIBLE'
-    elsif cameron.any? { |activity| overlap?(activity, time_blocks[i]) }
+    elsif overlap_any?(cameron, time_blocks[i])
       jamie << time_blocks[i]
       output << 'J'
     else
@@ -31,13 +36,16 @@ def schedule(test, time_blocks)
 end
 
 # Gets input, and assigns it to variables
-test_cases = gets.to_i
-test_cases.times do |test|
-  activities = gets.to_i
-  schedule = []
-  activities.times do
-    schedule << gets.chomp.split(' ').map(&:to_i)
-  end
-  puts schedule(test + 1, schedule)
-end
+# test_cases = gets.to_i
+# test_cases.times do |test|
+#   activities = gets.to_i
+#   schedule = []
+#   activities.times do
+#     schedule << gets.chomp.split(' ').map(&:to_i)
+#   end
+#   puts schedule(test + 1, schedule)
+# end
 
+
+
+# rubocop:enable Style/FrozenStringLiteralComment
