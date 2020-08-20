@@ -1,7 +1,6 @@
-def overlaps?(activity_1, activity_2)
+def overlap?(activity_1, activity_2)
   return false unless activity_1
   return false unless activity_2
-
   [activity_1[0], activity_2[0]].max < [activity_1[-1], activity_2[-1]].min
 end
 
@@ -17,9 +16,9 @@ def schedule(test, time_blocks)
       cameron << time_blocks[i]
       i += 1
       next output << 'C'
-    elsif overlaps?(cameron.last, time_blocks[i]) && overlaps?(jamie.last, time_blocks[i])
+    elsif jamie.any? { |activity| overlap?(activity, time_blocks[i]) } && cameron.any? { |activity| overlap?(activity, time_blocks[i]) }
       break output = 'IMPOSSIBLE'
-    elsif overlaps?(cameron.last, time_blocks[i])
+    elsif cameron.any? { |activity| overlap?(activity, time_blocks[i]) }
       jamie << time_blocks[i]
       output << 'J'
     else
@@ -41,3 +40,4 @@ test_cases.times do |test|
   end
   puts schedule(test + 1, schedule)
 end
+
