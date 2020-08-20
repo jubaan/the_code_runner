@@ -39,14 +39,18 @@ integers is .
 === Sample Input 0
 
 ...
-6
-4 6 5 3 3 1
+
+  6
+  4 6 5 3 3 1
+
 ...
 
 === Sample Output 0
 
 ...
-3
+
+  3
+
 ...
 
 === Explanation 0
@@ -58,14 +62,18 @@ number of chosen integers, , as our answer.
 === Sample Input 1
 
 ...
-6
-1 2 2 3 1 2
+
+  6
+  1 2 2 3 1 2
+
 ...
 
 === Sample Output 1
 
 ...
-5
+
+  5
+
 ...
 
 === Explanation 1
