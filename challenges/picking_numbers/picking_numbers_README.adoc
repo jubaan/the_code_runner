@@ -1,5 +1,9 @@
 =  Picking Numbers
 
+source:
+https://www.hackerrank.com/contests/microverse-coding-challenges/challenges/picking-numbers[HackerRank]
+from https://www.microverse.org[Microverse]
+
 == PROBLEM
 
 Given an array of integers, find and print the maximum number of integers you
