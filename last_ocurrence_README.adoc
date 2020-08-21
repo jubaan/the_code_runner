@@ -31,7 +31,14 @@ _M_ in the array if it exists, otherwise print -1.
 
 |===
 |SAMPLE INPUT |SAMPLE OUTPUT
+<<<<<<< HEAD
 |5 1  +
+=======
+
+|5 1 +
+
+>>>>>>> 37f9a65... Fix input example
 1 2 3 4 1
+
 |5
 |===
