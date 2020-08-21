@@ -51,4 +51,15 @@ end
 def binary_search(arr, value)
   low  = 0
   high = arr.size - 1
+  while low <= high
+    mid = low + (high - low) / 2 # To avoid the overflow
+    if arr[mid] == value
+      return true
+    elsif arr[mid] < value
+      low = mid + 1
+    else
+      high = mid - 1
+    end
+  end
+  false
 end
