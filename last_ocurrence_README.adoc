@@ -31,8 +31,6 @@ _M_ in the array if it exists, otherwise print -1.
 |SAMPLE INPUT |SAMPLE OUTPUT
 
 |5 1 +
-
 1 2 3 4 1
-
 |5
 |===
