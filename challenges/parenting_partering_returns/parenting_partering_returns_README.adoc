@@ -87,11 +87,11 @@ Test set 2 (visible Verdict)
 150 250 +
 2 +
 0 720 +
-720 1440 +
+720 1440
 |Case #1: CJC +
 Case #2: IMPOSSIBLE +
 Case #3: JCCJJ +
-Case #4: CC +
+Case #4: CC
 |===
 
 Sample Case #1 is the one described in the problem statement. As mentioned above, there are other valid solutions, like JCJ and JCC.
