@@ -23,13 +23,14 @@ Print a single integer denoting the index of the last occurrence of integer
 _M_ in the array if it exists, otherwise print -1.
 
 === Constraints
-1 &lt;= _N_ &lt;= 10^5^
-1 &lt;= _A_[_i_] &lt;= 10^9^
+
+1 &lt;= _N_ &lt;= 10^5^ +
+1 &lt;= _A_[_i_] &lt;= 10^9^ +
 1 &lt;= _M_ &lt;= 10^9^
 
 |===
 |SAMPLE INPUT |SAMPLE OUTPUT
-|5 1
+|5 1 +
 1 2 3 4 1
 |5
 |===
