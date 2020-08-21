@@ -1,6 +1,10 @@
 # doctest: linear_search - returns index of value's last appearance
-# >> linear_search(5, [4, 5, 4, 6, 1], 4)
+# >> last_ocurrence(5, [4, 5, 4, 6, 1], 4)
 # => 3
+# >> last_ocurrence(5, [4, 5, 4, 6, 1], 9)
+# => -1
+# >> last_ocurrence(5, [4, 5, 4, 6, 1], 0)
+# => -1
 
 # NOTE: list index starts from 1, rather than 0.
 
