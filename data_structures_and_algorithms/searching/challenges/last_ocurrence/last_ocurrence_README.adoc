@@ -1,0 +1,36 @@
+= Last Ocurrence
+
+Source:
+https://www.hackerearth.com/practice/algorithms/searching/linear-search/tutorial/[hackerearth]
+
+== PROBLEM
+
+You have been given an array of size _N_ consisting of integers. In addition
+you have been given an element _M_ you need to find and print the index of the
+last occurrence of this element _M_ in the array if it exists in it,
+otherwise print -1. Consider this array to be 1 indexed.
+
+=== Input Format:
+
+The first line consists of 2 integers _N_ and _M_ denoting the size of the
+array and the element to be searched for in the array respectively . The next
+line contains _N_ space separated integers denoting the elements of of the
+array.
+
+=== Output Format
+
+Print a single integer denoting the index of the last occurrence of integer
+_M_ in the array if it exists, otherwise print -1.
+
+=== Constraints
+
+1 &lt;= _N_ &lt;= 10^5^ +
+1 &lt;= _A_[_i_] &lt;= 10^9^ +
+1 &lt;= _M_ &lt;= 10^9^
+
+|===
+|SAMPLE INPUT |SAMPLE OUTPUT
+|5 1 +
+1 2 3 4 1
+|5
+|===
