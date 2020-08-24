@@ -38,8 +38,7 @@ If we change the first number to something else, `comp` may not return true anym
 
 * `a` or `b` might be `[]` (all languages except R, Shell).
 * `a` or `b` might be `nil` or `null` or `None` or nothing (except in Haskell, Elixir, C++, Rust, R, Shell, PureScript).
-
-If `a` or `b` are `nil` (or `null` or `None`), the problem doesn't make sense so return false.
+* If `a` or `b` are `nil` (or `null` or `None`), the problem doesn't make sense so return false.
 
 *Note for C*
 The two arrays have the same size `(> 0)` given as parameter in function `comp`.
