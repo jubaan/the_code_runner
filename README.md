@@ -13,4 +13,8 @@ appreciate every bit of knowledge and resources. Share links to
 tutorials, articles or books, mentors, boot-camps, or whatever you think
 it may be of any help.
 
+## Quick notes
 
+### Ruby
+
+- Redability first, later optimization and refactor.
