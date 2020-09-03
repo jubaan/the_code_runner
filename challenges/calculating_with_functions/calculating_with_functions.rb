@@ -39,7 +39,7 @@ def nine
 end
 
 def plus(number)
-  self + number
+  self +.send(number.intern)
 end
 
 def minus(number)
@@ -53,3 +53,5 @@ end
 def divided_by(number)
   self / number
 end
+
+

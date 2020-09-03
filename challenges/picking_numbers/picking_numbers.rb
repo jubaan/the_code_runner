@@ -1,41 +1,82 @@
+# frozen_string_literal: true
+
 require 'pry-byebug'
 # doctest: returns a single integer denoting the maximum number of
-# integers you can choose from the array
-# >> pickingNumbers([4, 6, 5, 3, 3, 1])
+#          integers you can choose from the array
+# doctest: 4, 6, 5, 3, 3, 1
+# >> picking_numbers([4, 6, 5, 3, 3, 1])
 # => 3
-# >> pickingNumbers([1, 2, 2, 3, 1, 2])
+# doctest: 1, 2, 2, 3, 1, 2
+# >> picking_numbers([1, 2, 2, 3, 1, 2])
 # => 5
-# >> pickingNumbers([1, 2, 3, 4, 3, 2, 1])
+# doctest: 1, 2, 3, 4, 3, 2, 1
+# >> picking_numbers([1, 2, 3, 4, 3, 2, 1])
 # => 7
-# >> pickingNumbers([3, 2, 1, 4, 5, 6, 7, 8])
+# doctest: 3, 2, 1, 4, 5, 6, 7, 8
+# >> picking_numbers([3, 2, 1, 4, 5, 6, 7, 8])
 # => 6
-def pickingNumbers(a)
-  array = []
-  i = 0
-  max = 0
-  j = 0
-  while j < a.length
-    while i < a.length
-      # binding.pry
-      if array.empty?
-        array << a[j]
-        next i += 1
-      elsif (array.last - a[i]).abs <= 1
-        array << a[i]
-        next i += 1
-      elsif (array.last - a[i]).abs > 1 && (array[array.length - 2] - a[i]).abs <= 1
-        array.pop
-        array << a[i]
-        next i += 1
-      elsif (array.last - a[i]).abs > 1
-        next i += 1
-      end
-    end
-    max = array.count if max < array.count
-    j += 1
-  end
-  max
-end
-a = [4, 6, 5, 3, 3, 1]
 
-pp pickingNumbers(a)
+# def picking_numbers(numbers)
+#   max = 0
+#   numbers.each_index do |i|
+#     left = numbers[..i].reverse
+#     pivot = numbers[i]
+#     right = numbers[i..]
+
+#     count_left = length(left, pivot)
+#     count_right = length(right, pivot)
+
+#     size = count_left <=> count_right
+#     triggers = { 1 => count_left, 0 => count_left, -1 => count_right }
+
+#    max = triggers[size] if triggers[size] > max
+#   end
+
+#   max
+# end
+
+# def length(collection, pivot_value)
+#   check_point = pivot_value
+#   collection.each_with_index.select { |e, i| (e - check_point).abs <= 1 && check_point = collection[i] }.length
+# end
+
+def picking_numbers(integers)
+  size = integers.length
+
+  max = 0
+  count = 0
+
+  integers.each do |int|
+    current = int
+    count = 1
+
+    j = 0
+    while integers[j, size - 1].include?(current + 1)
+      current += 1
+      count += 1
+
+      j += 1
+    end
+
+    i += 1
+  end
+
+  [max, count].max
+end
+
+p picking_numbers([4, 6, 5, 3, 3, 1])
+
+if defined? Minitest
+  describe 'picking numbers' do
+    it 'must return 3 for %s' % (data1 = [4, 6, 5, 3, 3, 1]).join(', ') do
+      _(picking_numbers(data1)).must_equal 3
+    end
+    it 'must return 3 for %s' % (data2 = [4, 5, 6, 3, 3, 1]).join(', ') do
+      _(picking_numbers(data2)).must_equal 3
+    end
+    it 'must return 6 for %s' % (data3 = [3, 2, 1, 4, 5, 6, 7, 8]).join(', ') do
+      _(picking_numbers(data3)).must_equal 6
+    end
+  end
+  # require 'pry'
+end

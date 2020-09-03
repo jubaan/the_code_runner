@@ -25,20 +25,20 @@ _a_: an array of integers
 
 === Input Format
 
-The first line contains a single integer , the size of the array .
-The second line contains  space-separated integers _a_[_i_].
+The first line contains a single integer , the size of the array.
+The second line contains space-separated integers _a_[_i_].
 
 === Constraints
 
-* 2 &lt;= n &lt;= 100
-* 0 &lt; _a_[_i_ &lt; 100
-* The answer will be &gt; 2.
+* `2 ≤ n ≥ 100`
+* `0 < _a_[i] < 100`
+* The answer will be `≥ 2`.
 
 === Output Format
 
 A single integer denoting the maximum number of integers you can choose from
 the array such that the absolute difference between any two of the chosen
-integers is .
+integers is `<= 1` .
 
 === Sample Input 0
 
@@ -52,7 +52,7 @@ integers is .
 === Explanation 0
 
 We choose the following multiset of integers from the array: . Each pair in
-the multiset has an absolute difference  (i.e.,  and ), so we print the
+the multiset has an absolute difference  (i.e.,   and ), so we print the
 number of chosen integers, , as our answer.
 
 === Sample Input 1
@@ -67,6 +67,7 @@ number of chosen integers, , as our answer.
 === Explanation 1
 
 We choose the following multiset of integers from the array: {1, 2, 2, 1, 2}. Each pair in
-the multiset has an absolute difference &lt;= 1 (i.e.,|1 - 2| = 1,|1 - 1| = 0,
+the multiset has an absolute difference <= 1 (i.e.,|1 - 2| = 1,|1 - 1| = 0,
 and |2 - 2| = 0), so we print the number of chosen integers, 5, as our
 answer.
+https://www.hackerrank.com/challenges/picking-numbers/problem
