@@ -2,6 +2,7 @@ def likes(names)
   return 'no one likes this' if names.empty?
 
   size = names.length
+
   case
   when size == 1
     "#{names.first} likes this"
