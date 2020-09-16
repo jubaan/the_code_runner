@@ -1,17 +1,19 @@
-def likes(names)
-  return 'no one likes this' if names.empty?
+# frozen_string_literal: true
 
+def likes(names)
   size = names.length
 
-  case
-  when size == 1
+  case size
+  when 0
+    'no one likes this'
+  when 1
     "#{names.first} likes this"
-  when size == 2
+  when 2
     "#{names.fetch(0)} and #{names.fetch(1)} like this"
-  when size == 3
+  when 3
     "#{names.fetch(0)}, #{names.fetch(1)} and #{names.fetch(2)} like this"
-  when size > 3
-        rest_of_people = size - 2
+  else
+    rest_of_people = size - 2
     "#{names.fetch(0)}, #{names.fetch(1)} and #{rest_of_people} others like this"
   end
 end
