@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # doctest: Returns the sum of all numbers between a range including first and last, or return the number if first and last are the same
 # >> get_sum(0,1)
 # => 1

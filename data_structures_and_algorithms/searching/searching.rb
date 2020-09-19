@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Linear Search - Unsorted Input
 
 # doctest: ::linear_search_unsorted - returns a boolean value if the value is found or not
@@ -71,19 +73,18 @@ end
 # => true
 
 def binary_search_recursive(arr, value)
-  return binary_search_recursive_helper(arr, 0, arr.size - 1, value)
+  binary_search_recursive_helper(arr, 0, arr.size - 1, value)
 end
 
 def binary_search_recursive_helper(arr, low, high, value)
-  if low > high
-    return false
-  end
+  return false if low > high
+
   mid = low + (high - low) / 2 # To avoid the overflow
   if arr[mid] == value
-    return true
+    true
   elsif arr[mid] < value
-    return binary_search_recursive_helper(arr, mid + 1, high, value)
+    binary_search_recursive_helper(arr, mid + 1, high, value)
   else
-    return binary_search_recursive_helper(arr, mid - 1, high, value)
+    binary_search_recursive_helper(arr, mid - 1, high, value)
   end
 end

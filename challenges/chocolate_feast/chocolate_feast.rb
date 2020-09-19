@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def chocolateFeast(money, price, wrappers_per_free_bar)
   chocolates = money / price
   wrappers = chocolates

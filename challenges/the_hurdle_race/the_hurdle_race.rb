@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # doctest: Returns the minimum number of potions
 # >> potions_to_take(4, [1, 6, 3, 5, 2])
 # => 2

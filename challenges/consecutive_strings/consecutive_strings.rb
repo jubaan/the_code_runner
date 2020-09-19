@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def longest_consec(list, k)
   return 0 if k <= 0
 
