@@ -3,19 +3,15 @@
 def likes(names)
   size = names.length
 
-  case size
-  when 0
-    'no one likes this'
-  when 1
-    "#{names.first} likes this"
-  when 2
-    "#{names.fetch(0)} and #{names.fetch(1)} like this"
-  when 3
-    "#{names.fetch(0)}, #{names.fetch(1)} and #{names.fetch(2)} like this"
-  else
-    rest_of_people = size - 2
-    "#{names.fetch(0)}, #{names.fetch(1)} and #{rest_of_people} others like this"
-  end
+  phrases = [
+    'no one likes this',
+    "#{names.first} likes this",
+    "#{names[0]} and #{names[1]} like this",
+    "#{names[0]}, #{names[1]} and #{names[2]} like this",
+    "#{names[0]}, #{names[1]} and #{size - 2} others like this"
+  ]
+
+  size < 4 ? phrases[size] : phrases[4]
 end
 
 if defined? RSpec
