@@ -1,17 +1,22 @@
-# frozen_string_literal: true
+Phrases = {
+  0 => 'no one likes this',
+  1 => '%s likes this',
+  2 => '%s and %s like this',
+  3 => '%s, %s and %s like this',
+  group: '%s, %s and %d others like this'
+}
 
-def likes(names)
+def likes(*names)
+
+  names = [names].flatten
   size = names.length
 
-  phrases = [
-    'no one likes this',
-    "#{names.first} likes this",
-    "#{names[0]} and #{names[1]} like this",
-    "#{names[0]}, #{names[1]} and #{names[2]} like this",
-    "#{names[0]}, #{names[1]} and #{size - 2} others like this"
-  ]
-
-  size < 4 ? phrases[size] : phrases[4]
+  case size
+  when (0..3)
+    Phrases[size] % names
+  else
+    Phrases[:group] % [names.take(2), size - 2].flatten
+  end
 end
 
 if defined? RSpec
