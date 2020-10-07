@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # doctest: Returns a boolean, TRUE if the string ends with second substrinc or FALSE if not
 # >> solution('abc', 'bc')
 # => true
@@ -7,7 +9,7 @@
 def solution(str, ending)
   ending_size = ending.length
   ending_index = -1 * ending_size
-  str[ending_index,ending_size] == ending
+  str[ending_index, ending_size] == ending
 end
 
 # other solution

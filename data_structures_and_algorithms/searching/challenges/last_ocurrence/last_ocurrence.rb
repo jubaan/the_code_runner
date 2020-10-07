@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # doctest: linear_search - returns index of value's last appearance
 # >> last_ocurrence(5, [4, 5, 4, 6, 1], 4)
 # => 3
@@ -17,9 +19,10 @@ def last_ocurrence(size, arr, value)
   while i <= size
     if arr[i - 1] == value
       return i
-    elsif i < 0
+    elsif i.negative?
       return -1
     end
+
     i -= 1
   end
   -1

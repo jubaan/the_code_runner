@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # doctest: Returns 'YES' if Vasya can sell everyone a ticket or 'NO' if he # cann't
 # >> tickets([25, 25, 50])
 # => 'YES'
@@ -7,7 +9,7 @@
 # => 'NO'
 
 def tickets(people)
-  money = {25 => 0, 50 => 0, 100 => 0 }
+  money = { 25 => 0, 50 => 0, 100 => 0 }
 
   people.each do |bill|
     money[bill] += 1

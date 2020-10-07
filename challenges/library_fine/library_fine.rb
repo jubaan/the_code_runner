@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # doctest: 'Same day, month, and year, fine equals 0
 # >> libraryFine(15, 12, 2000, 15, 12, 2000)
 # => 0

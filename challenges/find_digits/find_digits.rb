@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # doctest: Returns 2 when 12 is given
 # >> find_digits(12)
 # => 2
@@ -7,6 +9,5 @@
 
 def find_digits(n)
   n.digits
-    .count { |e| !e.zero? && (n % e).zero? }
+   .count { |e| !e.zero? && (n % e).zero? }
 end
-

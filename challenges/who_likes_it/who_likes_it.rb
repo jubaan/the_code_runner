@@ -1,20 +1,21 @@
-# frozen_string_literal: true
+Phrases = {
+  0 => 'no one likes this',
+  1 => '%s likes this',
+  2 => '%s and %s like this',
+  3 => '%s, %s and %s like this',
+  group: '%s, %s and %d others like this'
+}
 
-def likes(names)
+def likes(*names)
+
+  names = [names].flatten
   size = names.length
 
   case size
-  when 0
-    'no one likes this'
-  when 1
-    "#{names.first} likes this"
-  when 2
-    "#{names.fetch(0)} and #{names.fetch(1)} like this"
-  when 3
-    "#{names.fetch(0)}, #{names.fetch(1)} and #{names.fetch(2)} like this"
+  when (0..3)
+    Phrases[size] % names
   else
-    rest_of_people = size - 2
-    "#{names.fetch(0)}, #{names.fetch(1)} and #{rest_of_people} others like this"
+    Phrases[:group] % [names.take(2), size - 2].flatten
   end
 end
 

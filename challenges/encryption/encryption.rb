@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # doctest: returns encripted string: 'hae and via ecy'
 # >> encryption('haveaniceday')
 # => 'hae and via ecy'

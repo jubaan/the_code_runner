@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # doctest: Return the sum of the even numbers in the secuense
 # >> sum_even_fibonacci(10)
 # => 10
@@ -9,7 +11,7 @@ def sum_even_fibonacci(n)
   b = 2
   sum = 0
   while a <= n
-    sum += a if a % 2 == 0
+    sum += a if a.even?
     a, b = b, a + b
   end
   sum

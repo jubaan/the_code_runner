@@ -10,6 +10,7 @@
 
 def comp(array1, array2)
   return false if array1.nil? || array2.nil?
+
   array1.sort.map { |e| e * e } == array2.sort
 end
 
