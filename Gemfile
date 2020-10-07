@@ -8,3 +8,4 @@ gem "rspec"
 gem 'rerun'
 gem 'rubydoctest'
 gem 'rubocop'
+gem 'pry-byebug'
